@@ -1,0 +1,17 @@
+/*
+Theme Name: 追格小站点评主题
+Theme URI: https://www.zhuige.com/product/ztfree.html
+Author: zhuige.com
+Author URI: https://www.zhuige.com/
+Description: 追格小站点评主题
+Version: 1.0.0
+Requires PHP: 7.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 追格, 导航
+*/
+
+@import 'css/base.css';
+@import 'css/grid.css';
+@import 'css/main.css';
+@import 'css/append.css';
