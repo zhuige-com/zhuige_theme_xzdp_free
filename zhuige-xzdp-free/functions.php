@@ -11,6 +11,7 @@ if (!defined('ABSPATH')) {
 
 require_once TEMPLATEPATH . '/inc/codestar-framework/codestar-framework.php';
 require_once TEMPLATEPATH . '/inc/admin-options.php';
+require_once TEMPLATEPATH . '/inc/zhuige-market.php';
 require_once TEMPLATEPATH . '/inc/zhuige-ajax.php';
 require_once TEMPLATEPATH . '/inc/zhuige-dashboard.php';
 require_once TEMPLATEPATH . '/inc/zhuige-post-type.php';
