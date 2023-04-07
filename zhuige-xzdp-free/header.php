@@ -11,8 +11,8 @@ if (!defined('ABSPATH')) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<title><?php zhuige_theme_xzdp_seo_title() ?></title>
 	<?php wp_head(); ?>
-	<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css" rel="stylesheet" />
-	<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/v4-shims.min.css" rel="stylesheet" />
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/fontawesome/css/all.min.css" rel="stylesheet" />
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/fontawesome/css/v4-shims.min.css" rel="stylesheet" />
 	<?php if (is_singular('zhuige_product')) { ?>
 		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/swiper.min.css" rel="stylesheet" />
 	<?php  } ?>
