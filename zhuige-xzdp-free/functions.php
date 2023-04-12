@@ -895,13 +895,10 @@ function zhuige_url_module($url)
 }
 
 /**
- * 
+ * 获取产品列表
  */
 function zhuige_theme_xzdp_get_products($offset, $params)
 {
-    global $wpdb;
-    // $table_posts = $wpdb->prefix . 'posts';
-
     $query = new WP_Query();
     $posts_per_page = 10;
     $args = [
@@ -938,7 +935,7 @@ function zhuige_theme_xzdp_get_products($offset, $params)
         $product = zhuige_theme_xzdp_format_product($post);
 
         // 产品/热门/近期列表
-        $content .= '<div class="zhugi-prd-bg pl-20 pr-20">';
+        $content .= '<div class="zhugi-prd-bg pl-20 pr-20 slide-in">';
         $content .= '<div class="zhuige-prd-list zhuige-prd-for-ajax-count">';
 
         $content .= '<div class="zhuige-prd-opt">';
@@ -990,15 +987,18 @@ function zhuige_theme_xzdp_get_products($offset, $params)
     return ['content' => $content, 'more' => (count($result) == $posts_per_page), 'args' => $args];
 }
 
+/**
+ * 格式化文章
+ */
 function zhuige_theme_xzdp_post_string($post, $show_sticky = false)
 {
     $content = '';
     $item = zhuige_theme_xzdp_format_post($post);
     // 列表基础
     if (is_sticky($post->ID)) {
-        $content .= '<div class="zhuige-base-list mb-20">';
+        $content .= '<div class="zhuige-base-list mb-20 slide-in">';
     } else {
-        $content .= '<div class="zhuige-base-list mb-20 zhuige-post-for-ajax-count">';
+        $content .= '<div class="zhuige-base-list mb-20 zhuige-post-for-ajax-count slide-in">';
     }
 
     if ($item['thumb']) {
@@ -1039,6 +1039,9 @@ function zhuige_theme_xzdp_post_string($post, $show_sticky = false)
     return $content;
 }
 
+/**
+ * 获取置顶的文章
+ */
 function zhuige_theme_xzdp_get_sticky_posts()
 {
     $sticks = get_option('sticky_posts');
@@ -1064,7 +1067,7 @@ function zhuige_theme_xzdp_get_sticky_posts()
 }
 
 /**
- * 
+ * 获取文章列表
  */
 function zhuige_theme_xzdp_get_posts($offset, $params)
 {
@@ -1098,12 +1101,12 @@ function zhuige_theme_xzdp_get_posts($offset, $params)
     return ['content' => $content, 'more' => (count($result) >= $posts_per_page)];
 }
 
-add_action('wp_insert_comment', 'zhuige_theme_xzdp_comment_inserted', 99, 2);
-function zhuige_theme_xzdp_comment_inserted($comment_id, $comment_object)
-{
-    $post = get_post($comment_object->comment_post_ID);
-    if ($post->post_type == 'zhuige_product') {
-        $score = isset($_POST["score"]) ? (int)($_POST["score"]) : 0;
-        add_comment_meta($comment_id, 'zhuige_product_score', $score, true);
-    }
-}
+// add_action('wp_insert_comment', 'zhuige_theme_xzdp_comment_inserted', 99, 2);
+// function zhuige_theme_xzdp_comment_inserted($comment_id, $comment_object)
+// {
+//     $post = get_post($comment_object->comment_post_ID);
+//     if ($post->post_type == 'zhuige_product') {
+//         $score = isset($_POST["score"]) ? (int)($_POST["score"]) : 0;
+//         add_comment_meta($comment_id, 'zhuige_product_score', $score, true);
+//     }
+// }

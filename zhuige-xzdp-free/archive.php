@@ -81,7 +81,8 @@ $cur_search = isset($wp_query->query_vars['search']) ? urldecode($wp_query->quer
 				?>
 
 				<!-- 顶部tab -->
-				<div class="zhuige-news-tab d-flex align-items-center justify-content-between p-20">
+				<?php $sticky_top = 'top: ' . (zhuige_theme_is_show_admin_bar() ? 94 : 62) . 'px;'; ?>
+				<div class="zhuige-news-tab d-flex align-items-center justify-content-between p-20" style="<?php echo $sticky_top ?>">
 
 					<div class="zhuige-base-tab d-flex">
 						<?php

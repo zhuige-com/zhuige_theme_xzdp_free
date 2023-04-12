@@ -22,8 +22,9 @@ if (have_posts()) {
 					<?php
 					$about_nav = zhuige_theme_xzdp_option('about_nav');
 					if (is_array($about_nav) && in_array($post->ID, $about_nav)) {
+						$sticky_top = 'top: ' . (zhuige_theme_is_show_admin_bar() ? 94 : 62) . 'px;';
 					?>
-						<div class="main-cont-block zhuige-page-tab-box p-20 mb-20">
+						<div class="main-cont-block zhuige-page-tab-box p-20 mb-20" style="<?php echo $sticky_top ?>">
 							<!-- 顶部tab -->
 							<div class="zhuige-user-tab">
 								<div class="d-flex align-items-center justify-content-center">

@@ -1341,8 +1341,8 @@ nav .zhuige-nav-list li.nav-activ>a:before {
 	background: #FFFFFF;
 	border-radius: 12px;
 	position: sticky;
-	top: 60px;
 	z-index: 999;
+	box-shadow: 0px 2px 2px #DDD;
 }
 
 .zhuige-mini-search {
@@ -2126,8 +2126,8 @@ nav .zhuige-nav-list li.nav-activ>a:before {
 /****** 个人资料 ******/
 .zhuige-page-tab-box {
 	position: sticky;
-	top: 60px;
 	z-index: 999;
+	box-shadow: 0px 2px 2px #DDD;
 }
 
 .zhuige-user-tab {}

@@ -16,15 +16,6 @@
 	margin-left: 160px;
 }
 
-/* .zhuige-prd-base .zhuige-prd-opt {
-	background: none;
-	border: 1px solid #1173EB;
-}
-
-.zhuige-prd-base .zhuige-prd-opt a {
-	color: #333
-} */
-
 .zhuige-prd-base .zhuige-prd-opt.active {
 	background: #1173EB;
 	border: none;
@@ -124,4 +115,43 @@
 	border-radius: 20px;
 	cursor: pointer;
 }
+
 /*** 评论框 End ***/
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+.slide-in {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-top {
+	0% {
+		-webkit-transform: translateY(50px);
+		transform: translateY(50px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-top {
+	0% {
+		-webkit-transform: translateY(50px);
+		transform: translateY(50px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
