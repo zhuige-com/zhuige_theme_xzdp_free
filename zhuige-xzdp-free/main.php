@@ -31,9 +31,9 @@ if (!defined('ABSPATH')) {
                                 <li class="<?php echo ($query_obj && ($cat_id == $query_obj->term_id)) ? 'active' : '' ?>">
                                     <a href="<?php echo get_term_link($term) ?>" title="<?php echo $term->name ?>">
                                         <?php if (isset($term_option['logo']) && $term_option['logo']['url']) { ?>
-                                        <span>
-                                            <img src="<?php echo $term_option['logo']['url'] ?>" alt="<?php echo $term->name ?>">
-                                        </span>
+                                            <span>
+                                                <img src="<?php echo $term_option['logo']['url'] ?>" alt="<?php echo $term->name ?>">
+                                            </span>
                                         <?php } ?>
                                         <text><?php echo $term->name ?></text>
                                     </a>

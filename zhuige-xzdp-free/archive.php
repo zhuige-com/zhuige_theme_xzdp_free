@@ -22,8 +22,6 @@ if (is_tag()) {
 	$cur_tag_id = $query_obj->term_id;
 }
 
-// $cur_cat_id = isset($wp_query->query_vars['cat_id']) ? $wp_query->query_vars['cat_id'] : '';
-// $cur_tag_id = isset($wp_query->query_vars['tag_id']) ? $wp_query->query_vars['tag_id'] : '';
 $cur_search = isset($wp_query->query_vars['search']) ? urldecode($wp_query->query_vars['search']) : '';
 
 ?>

@@ -75,23 +75,23 @@ if (post_password_required()) {
     ?>
 
     <!-- 评论列表 -->
-	
-		<div class="zhuige-comment-list">
-			<?php wp_list_comments([
-				'type' => 'comment',
-				'reverse_top_level' => true,
-				'callback' => 'zhuige_theme_xzdp_comment_list'
-			]) ?>
-		</div>
 
-		<!-- 无评论提示 -->
-		<?php if (get_comment_count($post->ID)['all'] == 0) { ?>
-			<div class="zhuige-none-tips">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/images/not_found.png' ?>" alt="picture loss" />
-				<p>暂无评论，你要说点什么吗？</p>
-			</div>
-		<?php } ?>
+    <div class="zhuige-comment-list">
+        <?php wp_list_comments([
+            'type' => 'comment',
+            'reverse_top_level' => true,
+            'callback' => 'zhuige_theme_xzdp_comment_list'
+        ]) ?>
+    </div>
+
+    <!-- 无评论提示 -->
+    <?php if (get_comment_count($post->ID)['all'] == 0) { ?>
+        <div class="zhuige-none-tips">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/images/not_found.png' ?>" alt="picture loss" />
+            <p>暂无评论，你要说点什么吗？</p>
+        </div>
+    <?php } ?>
 
 
-	</div>
+</div>
 </div>

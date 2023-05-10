@@ -54,7 +54,6 @@ if (!defined('ABSPATH')) {
 						$target = $item['blank'] ? '_blank' : '_self';
 			?>
 						<li class="<?php echo $class ?>">
-							<!-- 点击跳转后增加当前状态 class="active" -->
 							<p>
 								<a href="<?php echo $tab['url'] ?>" target="<?php echo $target ?>" title="<?php echo $tab['title'] ?>">
 									<i class="<?php echo $tab['icon'] ?>" style="font-size: <?php echo  $tab['title'] ? 1.4 : 2 ?>em"></i>
@@ -93,4 +92,5 @@ if (!defined('ABSPATH')) {
 </div>
 
 </body>
+
 </html>

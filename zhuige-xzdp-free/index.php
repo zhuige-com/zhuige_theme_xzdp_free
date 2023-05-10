@@ -48,23 +48,23 @@ if (is_home()) {
 		</div>
 
 		<?php
-			if ($home_header['bg_image'] && $home_header['bg_image']['url']) {
-				$home_header_background = $home_header['bg_image']['url'];
-			} else {
-				$home_header_background = get_stylesheet_directory_uri() . '/images/home_header_background.jpg';
-			}
+		if ($home_header['bg_image'] && $home_header['bg_image']['url']) {
+			$home_header_background = $home_header['bg_image']['url'];
+		} else {
+			$home_header_background = get_stylesheet_directory_uri() . '/images/home_header_background.jpg';
+		}
 		?>
 		<div class="zhuige-search-bg" style="background: url(<?php echo $home_header_background ?>) no-repeat center; background-size: cover;">
 			<!-- 搜索区背景可以设置为图片或视频 -->
 			<?php
-				if (!wp_is_mobile() && $home_header['bg_video']) {
+			if (!wp_is_mobile() && $home_header['bg_video']) {
 			?>
-					<!-- 背景视频自动循环播放 -->
-					<video autoplay muted loop>
-						<source src="<?php echo $home_header['bg_video'] ?>" type="video/mp4" />
-					</video>
+				<!-- 背景视频自动循环播放 -->
+				<video autoplay muted loop>
+					<source src="<?php echo $home_header['bg_video'] ?>" type="video/mp4" />
+				</video>
 			<?php
-				}
+			}
 			?>
 		</div>
 

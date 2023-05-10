@@ -1475,7 +1475,8 @@ nav .zhuige-nav-list li.nav-activ>a:before {
 	position: relative;
 }
 
-.zhuige-prd-base .zhuige-prd-opt a, .zhuige-prd-base .zhuige-prd-link {
+.zhuige-prd-base .zhuige-prd-opt a,
+.zhuige-prd-base .zhuige-prd-link {
 	color: #FFFFFF;
 	margin-top: -10px;
 }
@@ -1485,7 +1486,8 @@ nav .zhuige-nav-list li.nav-activ>a:before {
 	padding: 12px 4px 0 0;
 }
 
-.zhuige-prd-base .zhuige-prd-opt:hover, .zhuige-prd-base .zhuige-prd-link:hover {
+.zhuige-prd-base .zhuige-prd-opt:hover,
+.zhuige-prd-base .zhuige-prd-link:hover {
 	background: #20a1eb;
 	transition-duration: 0.3s;
 	cursor: pointer;
@@ -1587,10 +1589,13 @@ nav .zhuige-nav-list li.nav-activ>a:before {
 .zhuige-prd-text .post-password-form {
 	padding: 10px 0;
 }
-.zhuige-prd-text .post-password-form p, .zhuige-prd-text .post-password-form p label {
+
+.zhuige-prd-text .post-password-form p,
+.zhuige-prd-text .post-password-form p label {
 	display: flex;
 	align-items: center;
 }
+
 .zhuige-prd-text .post-password-form p {
 	padding-bottom: 10px;
 }
@@ -1602,6 +1607,7 @@ nav .zhuige-nav-list li.nav-activ>a:before {
 	border-radius: 2px 0 0 2px;
 	width: 200px;
 }
+
 .zhuige-prd-text .post-password-form input[type=submit] {
 	height: 36px;
 	line-height: 36px;

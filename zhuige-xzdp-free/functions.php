@@ -150,7 +150,6 @@ function zhuige_theme_xzdp_init()
     $url = get_template_directory_uri();
 
     // 注册脚本
-    // wp_register_script('jquery', 'https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js');
     wp_register_script('lib-script', $url . '/js/lib/lb.js', [], '0.1');
     wp_register_script('lib-swiper', $url . '/js/lib/swiper.min.js', [], '5.4.5');
     wp_register_script('lib-layer', $url . '/js/layer/layer.js', ['jquery'], '1.0', false);
@@ -734,11 +733,11 @@ function zhuige_theme_xzdp_comment_list($comment, $args, $depth)
                 <div class="zhuige-list-text">
                     <h6>
                         <?php
-                            if ($comment->user_id) {
-                                $nickname = get_user_meta($comment->user_id, 'nickname', true);
-                            } else {
-                                $nickname = $comment->comment_author;
-                            }
+                        if ($comment->user_id) {
+                            $nickname = get_user_meta($comment->user_id, 'nickname', true);
+                        } else {
+                            $nickname = $comment->comment_author;
+                        }
                         ?>
                         <a href="<?php echo $user_site ?>" title="<?php echo $nickname ?>" target="_blank">
                             <text><?php echo $nickname ?></text>
@@ -747,13 +746,13 @@ function zhuige_theme_xzdp_comment_list($comment, $args, $depth)
                     </h6>
                     <p>
                         <?php echo get_comment_text() ?>
-                    </p>                  
+                    </p>
                 </div>
             </div>
             <div class="zhuige-comment-opt d-flex">
                 <?php if ($depth < $args['max_depth']) { ?>
                     <!-- <a href="javascript:void(0)" data-comment_id="<?php echo $comment->comment_ID ?>" data-nickname="<?php echo get_user_meta($comment->user_id, 'nickname', true) ?>" class="zhuige-comment-btn-reply" title="回复">回复</a> -->
-                <?php 
+                <?php
                     echo comment_reply_link(array_merge($args, array('respond_id' => 'product-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'])));
                 }
                 ?>
@@ -1078,7 +1077,6 @@ function zhuige_theme_xzdp_get_posts($offset, $params)
         'offset' => $offset,
         'posts_per_page' => $posts_per_page,
         'orderby' => 'date',
-        // 'post__not_in' => get_option('sticky_posts'),
         'ignore_sticky_posts' => 1
     ];
 
@@ -1100,13 +1098,3 @@ function zhuige_theme_xzdp_get_posts($offset, $params)
 
     return ['content' => $content, 'more' => (count($result) >= $posts_per_page)];
 }
-
-// add_action('wp_insert_comment', 'zhuige_theme_xzdp_comment_inserted', 99, 2);
-// function zhuige_theme_xzdp_comment_inserted($comment_id, $comment_object)
-// {
-//     $post = get_post($comment_object->comment_post_ID);
-//     if ($post->post_type == 'zhuige_product') {
-//         $score = isset($_POST["score"]) ? (int)($_POST["score"]) : 0;
-//         add_comment_meta($comment_id, 'zhuige_product_score', $score, true);
-//     }
-// }

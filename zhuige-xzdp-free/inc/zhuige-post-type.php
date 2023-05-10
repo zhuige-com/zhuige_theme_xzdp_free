@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ABSPATH')) {
-    exit;
+	exit;
 }
 
 add_action('init', 'zhuige_post_type_product');

@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
@@ -47,18 +48,18 @@ $my_user_id = get_current_user_id();
 						$currect_url = zhuige_theme_xzdp_url();
 						foreach ($site_nav as $item) {
 							if ($item['switch']) {
-							$class = (zhuige_url_module($currect_url) == zhuige_url_module($item['url']) ? 'nav-activ' : '');
-							$target = $item['blank'] ? '_blank' : '_self';
+								$class = (zhuige_url_module($currect_url) == zhuige_url_module($item['url']) ? 'nav-activ' : '');
+								$target = $item['blank'] ? '_blank' : '_self';
 					?>
-							<li class="<?php echo $class ?>"><a href="<?php echo $item['url'] ?>" target="<?php echo $target ?>"><?php echo $item['title'] ?></a></li>
-					<?php
+								<li class="<?php echo $class ?>"><a href="<?php echo $item['url'] ?>" target="<?php echo $target ?>"><?php echo $item['title'] ?></a></li>
+						<?php
 							}
 						}
 					} else {
 						?>
-							<li><a href="<?php echo home_url('news') ?>">资讯</a></li>
-						<?php
-					} 
+						<li><a href="<?php echo home_url('news') ?>">资讯</a></li>
+					<?php
+					}
 					?>
 				</ul>
 			</div>
