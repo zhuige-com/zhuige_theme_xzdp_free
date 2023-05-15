@@ -105,10 +105,10 @@ endif;
 							if ($is_next_post) : ?>
 								<div>
 									<h6 class="mb-20">
-										<a href="<?php echo get_permalink($prev_post->ID); ?>" title="下一篇">下一篇</a>
+										<a href="<?php echo get_permalink($next_post->ID); ?>" title="下一篇">下一篇</a>
 									</h6>
 									<p>
-										<a href="<?php echo get_permalink($prev_post->ID); ?>" title="标题"><?php echo apply_filters('the_title', $next_post->post_title); ?></a>
+										<a href="<?php echo get_permalink($next_post->ID); ?>" title="标题"><?php echo apply_filters('the_title', $next_post->post_title); ?></a>
 									</p>
 								</div>
 							<?php endif; ?>
