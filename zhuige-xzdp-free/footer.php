@@ -51,7 +51,7 @@ if (!defined('ABSPATH')) {
 				foreach ($h5_tabbar as $tab) {
 					if ($tab['switch']) {
 						$class = (zhuige_url_module($currect_url) == zhuige_url_module($tab['url']) ? 'active' : '');
-						$target = $item['blank'] ? '_blank' : '_self';
+						$target = $tab['blank'] ? '_blank' : '_self';
 			?>
 						<li class="<?php echo $class ?>">
 							<p>
