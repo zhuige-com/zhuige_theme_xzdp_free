@@ -50,9 +50,9 @@ if (post_password_required()) {
 
                             <?php if (!is_user_logged_in()) { ?>
                                 <ul>
-                                    <li class="comment-form-author"><label for="author">*姓名：</label> <input id="author" name="author" type="text" value="" size="30" maxlength="245"></li>
-                                    <li class="comment-form-email"><label for="email">*Email：</label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes"></li>
-                                    <li class="comment-form-url"><label for="url">站点：</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></li>
+                                    <li class="comment-form-author"><label for="author">*姓名：</label> <input id="author" name="author" type="text" value="" placeholder="姓名" size="30" maxlength="100"></li>
+                                    <li class="comment-form-email"><label for="email">*Email：</label> <input id="email" name="email" type="text" value="" placeholder="Email" size="30" maxlength="100" aria-describedby="email-notes"></li>
+                                    <li class="comment-form-url"><label for="url">站点：</label> <input id="url" name="url" type="text" value="" placeholder="网址" size="30" maxlength="100"></li>
                                 </ul>
                             <?php } ?>
                             <div class="form-submit mt-10">
@@ -93,5 +93,4 @@ if (post_password_required()) {
     <?php } ?>
 
 
-</div>
 </div>
