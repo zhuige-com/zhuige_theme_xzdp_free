@@ -155,6 +155,7 @@ function zhuige_theme_xzdp_init()
     wp_register_script('lib-layer', $url . '/js/layer/layer.js', ['jquery'], '1.0', false);
     wp_register_script('zhuige-footer-script', $url . '/js/zhuige.footer.js', ['jquery'], '0.1', true);
     wp_register_script('zhuige-single-script', $url . '/js/zhuige.single.js', ['lib-layer'], '0.1', true);
+    wp_register_script('zhuige-index-script', $url . '/js/zhuige.index.js', ['jquery', 'lib-script', 'lib-layer'], '0.8', true);
 
     // 其它需要在init action处运行的脚本
 }
@@ -175,6 +176,10 @@ function zhuige_theme_xzdp_scripts()
 
     if (is_single()) {
         wp_enqueue_script('zhuige-single-script');
+    }
+
+    if (is_home()) {
+        wp_enqueue_script('zhuige-index-script');
     }
 }
 add_action('wp_enqueue_scripts', 'zhuige_theme_xzdp_scripts');
@@ -281,7 +286,7 @@ function zhuige_theme_xzdp_thumbnail_src_d($post_id, $post_content)
     $post_thumbnail_src = '';
     if (has_post_thumbnail($post_id)) {    //如果有特色缩略图，则输出缩略图地址
         $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
-        if (is_array($thumbnail_src) && count($thumbnail_src) > 0) {
+        if ($thumbnail_src) {
             $post_thumbnail_src = $thumbnail_src[0];
         }
     } 
@@ -293,7 +298,7 @@ function zhuige_theme_xzdp_thumbnail_src_d($post_id, $post_content)
         if ($matches && isset($matches[1]) && isset($matches[1][0])) {
             $post_thumbnail_src = $matches[1][0];   //获取该图片 src
         }
-    };
+    }
 
     return $post_thumbnail_src;
 }

@@ -80,4 +80,10 @@ if (is_home()) {
 <!-- 主内容区 -->
 <?php require_once("main.php") ?>
 
+<div id="home-ad-pop" style="display: none;">
+	<a class="home-ad-pop-link" href="" target="_blank">
+		<img class="home-ad-pop-image" src="" style="height: 60vh;" />
+	</a>
+</div>
+
 <?php get_footer(); ?>

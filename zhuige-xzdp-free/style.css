@@ -4,7 +4,7 @@ Theme URI: https://www.zhuige.com/product/ztfree.html
 Author: zhuige.com
 Author URI: https://www.zhuige.com/
 Description: 追格小站点评主题
-Version: 1.1.2
+Version: 1.1.3
 Requires PHP: 7.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -3108,4 +3108,17 @@ nav .zhuige-nav-list li.nav-activ>a:before {
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+body .layui-layer-noboxshade{
+    background: 0 0;
+    box-shadow: none;
+}
+
+body .layui-layer-noboxshade .layui-layer-content {
+    overflow: hidden;
+}
+
+body .layui-layer-noboxshade .layui-layer-content img {
+	width: auto;
 }

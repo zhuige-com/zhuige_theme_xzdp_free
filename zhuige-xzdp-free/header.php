@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 	<?php if (is_singular('zhuige_product')) { ?>
 		<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/swiper.min.css" rel="stylesheet" />
 	<?php  } ?>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?ver=1.2.2">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?ver=<?php echo filemtime(get_stylesheet_directory() . '/style.css') ?>">
 	<script>
 		var show_login_pop;
 	</script>
